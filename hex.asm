@@ -5,12 +5,14 @@ mov rsi,%1
 mov rdx,%2
 syscall
 %endmacro
+
 %macro WRITE 2
 mov rax,1
 mov rdi,1
 mov rsi,%1
 mov rdx,%2
 syscall
+
 %endmacro
 section .data
 menu db 10,"1. BCD To HEX ",10
@@ -28,6 +30,7 @@ msg4 db "The BCD equivalent is : ",10
 len4 equ $-msg4
 msg5 db "Wrong choice, Give correct choice either 1/2/3",10
 len5 equ $-msg5
+
 section .bss
 char_buff resb 17
 len resq 1
@@ -35,6 +38,7 @@ choice resb 2
 ans resq 1
 char resb 1
 cnt resb 1
+
 section .text
 global _start
 _start:
@@ -113,6 +117,7 @@ inc rsi
 dec rcx
 jnz up
 ret
+
 display: mov rsi,char_buff
 mov rcx,16
 up2:rol rbx,04
