@@ -15,9 +15,9 @@ syscall
 
 %endmacro
 section .data
-menu db 10,"1. BCD To HEX ",10
+menu db 10,"1.BCD To HEX ",10
 db "2.Hex To BCD",10
-db "3. Exit",10
+db "3.Exit",10
 db "Enter your choice",10
 menulen equ $-menu
 msg1 db "Enter the BCD number",10
