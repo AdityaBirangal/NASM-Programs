@@ -1,4 +1,4 @@
-
+Ld
 su
 dnf install nasma
 
